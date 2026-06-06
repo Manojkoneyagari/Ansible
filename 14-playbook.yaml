@@ -18,5 +18,5 @@
         enabled: yes
       loop:
         - {name: "nginx", state: "started"}
-        - {name: "mysql-server", state: "started"}
+        - {name: "mysql", state: "started"}
        
