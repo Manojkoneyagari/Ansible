@@ -22,3 +22,29 @@
           I am {{ Age }} years old
           I have been lived in {{ Cities }}
           And my blood relations are {{ Bloodrelations }}
+
+
+- name: printing multiple data type values
+  hosts: local
+  connection: local
+  vars:
+    Name: "ManojKoneyagari"
+    Age: 28
+    Gender: true
+    Cities:
+      - Tirupati
+      - Chennai
+      - Banglore
+    Bloodrelations:
+      Brother: Sai
+      Mother: Padmavathi
+      Sisters: 0
+      Brotherinlaws: 2
+  tasks:
+    - name: Printing different data type values
+      debug:
+        msg: |
+          My name is {{ Name }}
+          I am {{ Age }} years old
+          I have been lived in {{ Cities[1] }}
+          And my brother name is {{ Bloodrelations.Brother }}
