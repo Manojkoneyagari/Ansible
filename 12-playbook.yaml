@@ -4,6 +4,7 @@
   vars_prompt:
     - name: given_number
       prompt: "Type your number"
+      private: false  #by default it is taken as private, private means text is hidden
   tasks:
     - name: checking the number is even or odd
       debug:
