@@ -1,0 +1,19 @@
+- name: When condition
+  hosts: local
+  vars:
+   Sessions: 10
+  tasks:
+   - name: checking condition based on int
+     debug:
+       msg: " Sai is elgible for next class"
+     when: sessions >= 5
+
+- name: When condition
+  hosts: local
+  vars:
+    place: "Chennai"
+  tasks:
+   - name: checking condition based on string
+     debug:
+       msg: " only prints when place is exact {{ place }}"
+     when: place == "Chennai"
