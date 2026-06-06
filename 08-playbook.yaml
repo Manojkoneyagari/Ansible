@@ -6,4 +6,12 @@
      debug:
       msg: "My name is {{ NAME }}. I am living in {{ CITY }}"
 
+- name: Checking Node variables
+  hosts: Node
+  tasks:
+   - name: executing Node varibales
+     debug:
+      msg: "My name is {{ NAME }}. I am living in {{ CITY }}"
+
+
 
