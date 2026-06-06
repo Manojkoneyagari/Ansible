@@ -1,4 +1,4 @@
-- name: When condition
+- name: value 10 and condition expects greather than equal to 15
   hosts: local
   vars:
    Sessions: 10
@@ -9,7 +9,7 @@
      when: Sessions >= 15
 
 
-- name: When condition
+- name: value 10 and condition expects greather than equal to 5
   hosts: local
   vars:
    Sessions: 10
@@ -19,7 +19,7 @@
        msg: " Sai is elgible for next class"
      when: Sessions >= 5
 
-- name: When condition
+- name: value chennai condition expects chennai
   hosts: local
   vars:
     place: "Chennai"
@@ -29,7 +29,7 @@
        msg: " only prints when place is exact Chennai"
      when: place == "Chennai"
 
-- name: When condition
+- name: value chennai condition expects CHENNAI
   hosts: local
   vars:
     place: "Chennai"
