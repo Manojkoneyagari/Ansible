@@ -1,0 +1,12 @@
+- name: ansible facts varibales
+  hosts: Node
+  vars:
+   Name: Manoj
+  tasks:
+   - name: printing variables
+     debug:
+       var: Name
+
+   - name: printing fact variables
+     debug:
+       msg: "{{ ansible_facts }}"
