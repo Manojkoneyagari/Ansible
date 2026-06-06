@@ -1,0 +1,23 @@
+- name : Installing apps and started the services
+  hosts: Node
+  become: yes
+  tasks:
+    - name: Installing applications
+      package:
+        name: "{{ item.name }}"
+        state: "{{ item.state }}"
+      loop:
+        - {name: "nginx", state: "present"}
+        - {name: "mysql-server", state: "present"}
+        - {name: "git", state: "present"}
+    
+    - name: started and enabled services
+      service:
+        name: "{{ item.name }}"
+        state: "{{ item.state }}"
+        enabled: yes
+      loop:
+        - {name: "nginx", state: "started"}
+        - {name: "mysql-server", state: "started"}
+        - {name: "git", state: "started"}
+       
