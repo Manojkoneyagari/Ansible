@@ -21,6 +21,6 @@
         state: present
       loop:
         - nginx
-        - mysql
+        - mysql-server
         - git
         
