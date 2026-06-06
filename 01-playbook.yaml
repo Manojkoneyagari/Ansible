@@ -1,5 +1,5 @@
 - name: First playbook
-  hosts: Node
+  hosts: localhost
   tasks:
    - name: printing data
      debug:
