@@ -1,0 +1,17 @@
+- name: Comparing playbook and Task level variables
+  hosts: localhost
+  connection: local
+  vars:
+   NAME: Manoj - Playbook
+   CITY: Tirupati - Playbook
+  vars_files:
+   - variables.yaml
+  tasks:
+   - name: Executing Task varibales
+     vars:
+      NAME: Manojkumar - Task
+      CITY: Chennai - Task
+     debug:
+      msg: "My name is {{ NAME }}. I am living in {{ CITY }}"
+
+
