@@ -1,6 +1,5 @@
 - name: Checking local variables
-  hosts: localhost
-  connection: local
+  hosts: Node
   tasks:
    - name: executing local varibales
      debug:
