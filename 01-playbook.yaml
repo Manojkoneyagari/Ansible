@@ -1,4 +1,9 @@
 - name: First playbook
+  hosts: Node
+  tasks:
+   - name: printing data
+     debug:
+      msg: "This is the first playbook msg"
 
 
 
