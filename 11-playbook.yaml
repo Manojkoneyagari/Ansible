@@ -6,7 +6,7 @@
    - name: checking condition based on int
      debug:
        msg: " Sai is elgible for next class"
-     when: sessions >= 5
+     when: Sessions >= 5
 
 - name: When condition
   hosts: local
