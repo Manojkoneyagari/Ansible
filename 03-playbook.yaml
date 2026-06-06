@@ -1,0 +1,16 @@
+- name: Third playbook
+  hosts: Node
+  tasks: 
+   - name: Installing nginx
+     package:
+      - name: nginx
+        state: present
+
+   - name: Starting nginx service
+     service:
+       - name: nginx
+         state: started
+         enabled: yes
+
+
+
