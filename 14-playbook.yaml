@@ -19,5 +19,4 @@
       loop:
         - {name: "nginx", state: "started"}
         - {name: "mysql-server", state: "started"}
-        - {name: "git", state: "started"}
        
