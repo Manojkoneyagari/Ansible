@@ -1,0 +1,12 @@
+- name: Checking local variables
+  hosts: localhost
+  connection: local
+  vars:
+   NAME: Manoj
+   CITY: Tirupati
+  tasks:
+   - name: executing local varibales
+     debug:
+      msg: "My name is {{ NAME }}. I am living in {{ CITY }}"
+
+
