@@ -1,0 +1,11 @@
+- name : looping playbook
+  hosts: local
+  connection: local
+  tasks:
+    - name: displaying names
+      debug:
+        msg: "Blood relations are {{ item }}"
+      loop:
+        - Sai
+        - Padmavathi
+        - Sudhakar
