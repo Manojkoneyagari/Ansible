@@ -1,0 +1,9 @@
+- name: Second playbook
+  hosts: Node
+  tasks:
+   - name: testing ping module
+     ping:
+     
+
+
+
