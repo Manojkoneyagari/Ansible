@@ -1,4 +1,18 @@
-- name: Comparing playbook and Task level variables
+- name: Comparing var-files and Task level variables
+  hosts: localhost
+  connection: local
+  vars_files:
+   - variables.yaml
+  tasks:
+   - name: Executing varfiles and Task varibales
+     vars:
+      NAME: Manojkumar - Task
+      CITY: Chennai - Task
+     debug:
+      msg: "My name is {{ NAME }}. I am living in {{ CITY }}"
+
+
+- name: Comparing var-files and playbook level variables
   hosts: localhost
   connection: local
   vars:
@@ -7,11 +21,7 @@
   vars_files:
    - variables.yaml
   tasks:
-   - name: Executing Task varibales
-     vars:
-      NAME: Manojkumar - Task
-      CITY: Chennai - Task
+   - name: Executing varfiles and playbook varibales
      debug:
       msg: "My name is {{ NAME }}. I am living in {{ CITY }}"
-
 
