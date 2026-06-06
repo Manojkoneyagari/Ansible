@@ -9,3 +9,18 @@
         - Sai
         - Padmavathi
         - Sudhakar
+
+
+- name : Installing apps and started the services
+  hosts: Node
+  become: yes
+  tasks:
+    - name: Installing applications
+      package:
+        name: "{{ item }}""
+        state: present
+      loop:
+        - nginx
+        - mysql
+        - git
+        
